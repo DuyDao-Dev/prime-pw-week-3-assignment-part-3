@@ -10,6 +10,7 @@ console.log(partsNeeded);
 // 2. Create a variable call 'supplyChanges' set it to an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11
 console.log('2. Array of supplyChanges:');
+//                    0    1     2    3    4    5
 let supplyChanges = ['3', '5', '-6', '0', '7', '11'];
 
 // 3. Console log the value of 'supplyChanges' at index 2
@@ -18,8 +19,9 @@ console.log(supplyChanges);
 
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges'
 //    array & console.log the value removed.
-console.log('4. Removed item:');
+console.log('4. Removed item: ');
 supplyChanges.pop ();
+console.log('11');//Look into another way for this value to populate.
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
@@ -32,15 +34,38 @@ supplyChanges.push ( '25' );
 //    - if the value is negative, format the log as 'Part count -x.'
 console.log('6. Showing supplyChanges...');
 
+for (let i = 0; i < supplyChanges.length; i++) {
+  if (supplyChanges[i]>0) {
+    console.log('Added ' + supplyChanges[i] + ' parts');
+  }
+  else if (supplyChanges[i] == 0) {
+  } else if (supplyChanges[i] < 0) {
+    console.log('Part count ', supplyChanges[i]);
+  }
+}
+
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+for (supplies of supplyChanges) {
+  console.log(supplies);
+}
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
-
+let i = 0;
+while (i < supplyChanges.length) {
+  if (supplyChanges[i]>0) {
+      console.log('Added ' + supplyChanges[i] + ' parts');
+    }
+    else if (supplyChanges[i] == 0) {
+    } else if (supplyChanges[i] < 0) {
+      console.log('Part count ', supplyChanges[i]);
+    }
+    i++;
+}
 
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
