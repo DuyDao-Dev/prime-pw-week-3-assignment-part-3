@@ -11,7 +11,7 @@ console.log(partsNeeded);
 //    the following numbers: 3, 5, -6, 0, 7, 11
 console.log('2. Array of supplyChanges:');
 //                    0    1     2    3    4    5
-let supplyChanges = ['3', '5', '-6', '0', '7', '11'];
+let supplyChanges = ['3', '5', '-6', '0', '7', '11']; //Answer should be 20
 
 // 3. Console log the value of 'supplyChanges' at index 2
 console.log('3. Item at index 2 is:');
@@ -25,7 +25,7 @@ console.log('11');//Look into another way for this value to populate.
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
-supplyChanges.push ( '25' );
+supplyChanges.push ( '25' );//New array value should be 34. 11 was removed in line 23.
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -70,3 +70,19 @@ while (i < supplyChanges.length) {
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
+
+// let sum = 0;
+//
+// for (i = 0; i < supplyChanges.length; i++) {
+//   sum += supplyChanges[i];
+//   console.log(sum);
+// }
+
+let sum = 0;
+
+for (i = 0; i < supplyChanges.length; i++) {
+
+  sum += parseInt(supplyChanges[i]);
+
+  console.log(sum);
+}
